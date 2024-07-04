@@ -1,4 +1,4 @@
-class A{
+class A {
 	public static void main(String[] args){
 		
 		System.out.print("\u001B[0m                                                                                                                     \n");
@@ -8,7 +8,7 @@ class A{
 		System.out.print("\u001B[91m   ██║     ╚██╔╝  ██╔═══╝ ██╔══╝      ╚════██║██║   ██║██║╚██╔╝██║██╔══╝     ██║   ██╔══██║██║██║╚██╗██║██║   ██║    \u001B[0m\n");
 		System.out.print("\u001B[91m   ██║      ██║   ██║     ███████╗    ███████║╚██████╔╝██║ ╚═╝ ██║███████╗   ██║   ██║  ██║██║██║ ╚████║╚██████╔╝    \u001B[0m\n");
 		System.out.print("\u001B[31m   ╚═╝      ╚═╝   ╚═╝     ╚══════╝    ╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝     \u001B[0m\n");
-		System.out.print("\u001B[0m 		\n");
+		System.out.print("\u001B[0m 		\n"); dfdfdf
 
 
 		System.out.print(": Color codes for reference :");

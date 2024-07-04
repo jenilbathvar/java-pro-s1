@@ -1,0 +1,44 @@
+example of private interface and how to use it's methods  ?
+
+In Java, you can define a private interface within a class. This private interface can only be implemented and accessed within that class. Here's an example of how to define and use a private interface and its methods:
+
+public class OuterClass {
+
+    // Private interface inside the class
+    private interface SecretService {
+        void secretMethod();
+    }
+
+    // A class that implements the private interface
+    private class SecretAgent implements SecretService {
+        public void secretMethod() {
+            System.out.println("Executing secret method.");
+        }
+    }
+
+    public void performSecretService() {
+        SecretService agent = new SecretAgent();
+        agent.secretMethod(); // Using the method of the private interface
+    }
+
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+        outer.performSecretService();
+    }
+}
+
+In this example:
+
+	SecretService is a private interface defined within OuterClass. It declares a method secretMethod().
+	SecretAgent is a private class within OuterClass that implements SecretService. It provides the implementation of secretMethod().
+	performSecretService() is a public method of OuterClass that creates an instance of SecretAgent and calls secretMethod() on it.
+	The main method creates an instance of OuterClass and calls performSecretService() to demonstrate the use of the private interface and its method.
+
+
+
+can i create that agent object in main method here ?
+
+
+	No, you cannot directly create an instance of SecretAgent in the main method because SecretAgent is a private inner class of OuterClass. The visibility of SecretAgent is restricted to OuterClass, so it cannot be instantiated or accessed directly from outside OuterClass, including from the main method which is static and cannot directly access inner classes.
+
+	To create an instance of SecretAgent from the main method, you would need to do so through a public or package-private method of OuterClass that exposes this functionality. In the provided example, performSecretService() serves this purpose by creating an instance of SecretAgent and invoking its method. This design encapsulates the creation and usage of SecretAgent, adhering to principles of encapsulation and information hiding.
